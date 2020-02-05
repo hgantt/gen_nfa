@@ -5,15 +5,17 @@ A small script that generates the LaTeX code for an NFA.
 Run `python gen_nfa.py input.txt`. The file `output.txt` will contain the generated LaTeX code.
 
 # Example
-The `input.txt` file should contain two lines. The first line should be a semi-colon delimited list of states and the second line should be a semi-colon delimited list of edges. Here is an example `input.txt`: 
+The `input.txt` file should contain two lines. The first line should be a semi-colon delimited list of states and the second line should be a semi-colon delimited list of edges. Here is an example `input.txt`.
 ```
     (1, "start", "");(2, "final", "right of=1")
     (1, 1, "a,b", "loop above");(1, 2, "a", "above")
 ```
 
-The format of the states is `(name, type, options)` and the format of the edges is `(starting node, ending node, name, options)`. A state that is neither a start state nor a final state should have an empty string as the middle parameter. 
+The format of the states is `(name, type, options)`. 
+The format of the edges is `(starting node, ending node, name, options)`. 
+A state that is neither a start state nor a final state should have an empty string as the middle parameter. 
 
-The following is the resulting `output.txt` after running the program:
+The following is the content of the resulting `output.txt` after running the program.
 ```
     \title{NFA Buffer}
     \documentclass[12pt]{article}
@@ -34,3 +36,7 @@ The following is the resulting `output.txt` after running the program:
     \end{tikzpicture}
     \end{document}
 ```
+
+The resulting NFA looks like this.
+![alt text][nfa]
+[nfa]: http://github.com/saadiqks/gen_nfa/nfa.png
