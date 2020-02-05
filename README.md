@@ -22,7 +22,7 @@ The following is the resulting `output.txt` after running the program:
     \usepackage{amsmath}
     \usepackage{tikz}
     \usetikzlibrary{automata, positioning, arrows}\begin{document}
-    \tikzset{->, >=stealth', node distance=3cm,every state/.style={thick, fill=gray!10}, initial text=$ $}
+    \tikzset{->,>=stealth',node distance=3cm,every state/.style={thick,fill=gray!10},initial text=$ $}
     \begin{tikzpicture}
         \node[state, initial, ] (1) {};
         \node[state, accepting, right of=1] (2) {};
