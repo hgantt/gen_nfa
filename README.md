@@ -40,6 +40,7 @@ The following is the content of the resulting `output.txt` after running the pro
 ```
 
 The resulting NFA looks like this.
+
 ![alt text][nfa]
 
 [nfa]: https://github.com/saadiqks/gen_nfa/blob/master/nfa.png "NFA"
