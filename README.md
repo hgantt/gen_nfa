@@ -44,3 +44,5 @@ The resulting NFA looks like this.
 ![alt text][nfa]
 
 [nfa]: https://github.com/saadiqks/gen_nfa/blob/master/nfa.png "NFA"
+
+If you want more information about generating NFAs in LaTeX, check out [this resource](https://www3.nd.edu/~kogge/courses/cse30151-fa17/Public/other/tikz_tutorial.pdf).
