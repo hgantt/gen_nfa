@@ -39,7 +39,7 @@ The following is the content of the resulting `output.tex` after running the pro
     \end{document}
 ```
 
-After compiling the TeX file, he resulting NFA looks like this.
+After compiling the TeX file, the resulting NFA looks like this.
 
 ![alt text][nfa]
 
