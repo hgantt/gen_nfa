@@ -17,7 +17,7 @@ The format of the edges is `(starting node, ending node, name, options)`.
 
 A state that is neither a start state nor a final state should have an empty string as the middle parameter. 
 
-The following is the content of the resulting `output.txt` after running the program.
+The following is the content of the resulting `output.tex` after running the program.
 ```
     \title{NFA Buffer}
     \documentclass[12pt]{article}
