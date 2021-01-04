@@ -41,26 +41,24 @@ for state in states:
         nfa_string += f"\t\\node[state, initial, {state[2]}] ({state[0]}) {{}};\n"
     elif state[1] == "final":
         nfa_string += f"\t\\node[state, accepting, {state[2]}] ({state[0]}) {{}};\n"
-    elif state[1] == "start,final":
+    elif state[1] == "start, final":
         nfa_string += f"\t\\node[state, initial, accepting, {state[2]}] ({state[0]}) {{}};\n"
 
 nfa_string += "\n\t\\draw\n"
 
 # Adding edges
 for edge in edges:
-    if "ε" in edge:
-        nfa_string += f"\t({edge[0]}) edge[{edge[3]}] node{{$\\varepsilon$}} ({edge[1]})\n"
-    elif wsos:
+    if wsos:
         e = tuple_to_matrix(edge[2])
         nfa_string += f"\t({edge[0]}) edge[{edge[3]}] node" + "{" + e + "}" + f" ({edge[1]})\n"
     else:
-        nfa_string += f"\t({edge[0]}) edge[{edge[3]}] node" + "{" + edge[2] + "}" + f" ({edge[1]})\n"
+        nfa_string += f"\t({edge[0]}) edge[{edge[3]}] node" + "{$" + edge[2] + "$}" + f" ({edge[1]})\n"
 
 nfa_string += ";\n"
 
 doc_latex += nfa_string
 doc_latex += "\\end{tikzpicture}\n\\end{document}\n"
 
-f = open("output.txt", "w")
+f = open("output.tex", "w")
 f.write(doc_latex)
 f.close()
