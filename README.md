@@ -2,7 +2,7 @@
 A small script that generates the LaTeX code for an NFA. 
 
 # Usage
-Run `python gen_nfa_latex.py input.txt`. The file `output.txt` will contain the generated LaTeX code.
+Run `python gen_nfa_latex.py input.txt`. The file `output.tex` will contain the generated LaTeX code.
 
 # Example
 The `input.txt` file should contain two lines. The first line should be a semi-colon delimited list of states and the second line should be a semi-colon delimited list of edges. Here is an example `input.txt`.
